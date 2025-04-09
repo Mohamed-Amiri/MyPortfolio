@@ -1,0 +1,39 @@
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.underline {
+  height: 4px;
+  width: 70px;
+  background-color: #5e72e4;
+  margin: 0 auto 30px;
+}
+
+.education-item {
+  margin-bottom: 20px;
+}
+
+.skill-badges {
+  margin-bottom: 15px;
+}
+
+.badge {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}

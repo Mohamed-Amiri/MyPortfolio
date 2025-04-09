@@ -1,0 +1,36 @@
+<section id="contact" class="section-padding bg-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contactez-moi</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-body p-5">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Nom complet</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Adresse e-mail</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="5" required></textarea>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
+              </div>
+            </form>
+            <div class="alert alert-success mt-4 d-none" id="formSuccess">
+              Votre message a été envoyé avec succès.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
