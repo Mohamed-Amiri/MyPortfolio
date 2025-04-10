@@ -1,20 +1,50 @@
-.navbar {
-  padding: 15px 0;
-  background-color: rgba(50, 50, 93, 0.9);
-  transition: all 0.3s ease;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #001f3f; /* Dark blue background to match home page */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
 }
 
-.navbar-brand {
-  font-weight: 700;
-  font-size: 26px;
+.logo {
+  color: #FFD700; /* Golden color for logo */
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.nav-link {
+ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+a {
+  color: #FFD700; /* Golden color for links */
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
   font-weight: 500;
-  padding: 10px 15px !important;
+  letter-spacing: 1px;
   transition: all 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #5e72e4 !important;
+a:hover {
+  color: #ffffff; /* White color on hover for contrast */
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+  }
+  ul {
+    gap: 15px;
+  }
+  a {
+    font-size: 14px;
+  }
 }

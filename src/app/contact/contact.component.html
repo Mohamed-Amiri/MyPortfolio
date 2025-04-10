@@ -1,36 +1,18 @@
-<section id="contact" class="section-padding bg-light">
+<section id="contact" class="py-5">
   <div class="container">
-    <div class="section-title">
-      <h2>Contactez-moi</h2>
-      <div class="underline"></div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card shadow-sm">
-          <div class="card-body p-5">
-            <form>
-              <div class="mb-3">
-                <label for="name" class="form-label">Nom complet</label>
-                <input type="text" class="form-control" id="name" required>
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Adresse e-mail</label>
-                <input type="email" class="form-control" id="email" required>
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="5" required></textarea>
-              </div>
-              <div class="d-grid">
-                <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
-              </div>
-            </form>
-            <div class="alert alert-success mt-4 d-none" id="formSuccess">
-              Votre message a été envoyé avec succès.
-            </div>
-          </div>
-        </div>
+    <h2 class="text-center mb-4">Contactez-moi</h2>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Votre nom" required [(ngModel)]="name" name="name">
       </div>
-    </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Votre email" required [(ngModel)]="email" name="email">
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" rows="5" placeholder="Votre message" required [(ngModel)]="message" name="message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+      <p *ngIf="messageSent" class="mt-3 text-success">Message envoyé avec succès !</p>
+    </form>
   </div>
 </section>

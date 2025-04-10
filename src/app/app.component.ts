@@ -4,7 +4,6 @@ import {FooterComponent} from './footer/footer.component';
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
 import {ProjectComponent} from './project/project.component';
-import {CvComponent} from './cv/cv.component';
 import {ContactComponent} from './contact/contact.component';
 
 @Component({
@@ -16,7 +15,6 @@ import {ContactComponent} from './contact/contact.component';
     HomeComponent,
     AboutComponent,
     ProjectComponent,
-    CvComponent,
     ContactComponent
   ],
   templateUrl: './app.component.html',

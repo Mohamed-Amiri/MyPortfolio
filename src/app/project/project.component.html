@@ -1,38 +1,32 @@
-<section id="projects" class="section-padding bg-light">
-  <div class="container">
-    <div class="section-title">
-      <h2>Mes projets</h2>
-      <div class="underline"></div>
-    </div>
-
-    <div class="project-filters text-center mb-4">
-      <button class="btn btn-sm btn-outline-primary active" data-filter="all">Tous</button>
-      <button class="btn btn-sm btn-outline-primary" data-filter="angular">Angular</button>
-      <button class="btn btn-sm btn-outline-primary" data-filter="react">React</button>
-      <button class="btn btn-sm btn-outline-primary" data-filter="node">Node.js</button>
-    </div>
-
-    <div class="row project-container">
-      <!-- Project 1 -->
-      <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="angular">
-        <div class="card h-100">
-          <img src="assets/project1.jpg" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Application E-commerce</h5>
-            <p class="card-text">Plateforme développée avec Angular et Node.js.</p>
-            <div class="tech-stack">
-              <span class="badge bg-secondary">Angular</span>
-              <span class="badge bg-secondary">Node.js</span>
-              <span class="badge bg-secondary">MongoDB</span>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-link"></i> Démo</a>
-            <a href="#" class="btn btn-sm btn-outline-dark"><i class="fab fa-github"></i> GitHub</a>
-          </div>
+<section class="projects">
+  <h2 class="section-title">Mes Projets</h2>
+  <div class="projects-wrapper">
+    <div class="project-card">
+      <div class="project-image">
+        <img src="assets/project1.jpg" alt="TalentFlow Project">
+      </div>
+      <div class="project-content">
+        <h3>TalentFlow</h3>
+        <p>Une application de recrutement intuitive faite avec Java EE et Angular, optimisée pour les RH.</p>
+        <div class="project-buttons">
+          <a href="https://github.com/username/talentflow" target="_blank">GitHub</a>
+          <a href="https://demo.talentflow.com" target="_blank">Voir le projet</a>
         </div>
       </div>
-      <!-- Repeat Project Cards as needed -->
+    </div>
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="assets/project2.jpg" alt="SportFlow Project">
+      </div>
+      <div class="project-content">
+        <h3>SportFlow</h3>
+        <p>Plateforme de gestion sportive pour réservations, matchs, membres – construite avec Java EE & Bootstrap.</p>
+        <div class="project-buttons">
+          <a href="https://github.com/username/sportflow" target="_blank">GitHub</a>
+          <a href="https://demo.sportflow.com" target="_blank">Voir le projet</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>

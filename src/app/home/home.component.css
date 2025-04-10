@@ -1,43 +1,102 @@
-.hero-section {
-  height: 100vh;
-  background: linear-gradient(135deg, #32325d 0%, #5e72e4 100%);
-  color: white;
+.home-section {
   display: flex;
-  align-items: center;
-  padding-top: 80px;
+  justify-content: space-between;
+  padding: 60px;
+  background: linear-gradient(135deg, #001f3f, #004d7a); /* Updated background gradient */
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
+.text-content {
+  flex: 1;
+  padding-right: 20px;
+  color: #ffffff;
+}
+
+.greeting {
+  color: #FFD700;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h1 {
+  color: #FFD700;
+  font-size: 50px;
+  margin: 10px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.role {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.bio {
+  color: #ccc;
+  font-size: 16px;
   margin-bottom: 20px;
 }
 
-.hero-content h2 {
-  font-size: 2rem;
-  font-weight: 400;
+.social-links {
   margin-bottom: 20px;
 }
 
 .social-links a {
-  display: inline-block;
+  color: #FFD700;
+  text-decoration: none;
   margin-right: 15px;
-  color: white;
-  font-size: 24px;
+  font-size: 18px;
   transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #2dce89;
-  transform: translateY(-3px);
+  color: #ffffff;
+  text-decoration: underline;
 }
 
-.hero-image {
+.contact-btn {
+  background-color: #FFD700;
+  color: #001f3f;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #ffcc00;
+}
+
+.image-content {
+  flex: 1;
   text-align: center;
+  position: relative;
 }
 
-.hero-image img {
-  max-width: 300px;
-  border: 8px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+img {
+  max-width: 90%;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .home-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .image-content {
+    margin-top: 20px;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  .contact-btn {
+    padding: 10px 20px;
+  }
 }
