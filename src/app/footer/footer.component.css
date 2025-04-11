@@ -1,12 +1,39 @@
-footer {
-  background-color: #212529;
-  color: #fff;
-}
-footer a {
-  text-decoration: none;
+.footer {
+  background-color: #0f0f0f;
+  padding: 40px 20px;
   color: #ccc;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-footer a:hover {
-  color: white;
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.shortcuts {
+  margin-bottom: 20px;
+}
+
+.shortcuts a {
+  margin: 0 15px;
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.shortcuts a:hover {
+  color: #ffffff;
   text-decoration: underline;
 }
+
+@media (max-width: 600px) {
+  .shortcuts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+

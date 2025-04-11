@@ -1,18 +1,18 @@
-<section id="contact" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Contactez-moi</h2>
-    <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
-      <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Votre nom" required [(ngModel)]="name" name="name">
-      </div>
-      <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Votre email" required [(ngModel)]="email" name="email">
-      </div>
-      <div class="mb-3">
-        <textarea class="form-control" rows="5" placeholder="Votre message" required [(ngModel)]="message" name="message"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Envoyer</button>
-      <p *ngIf="messageSent" class="mt-3 text-success">Message envoyé avec succès !</p>
-    </form>
-  </div>
+<section class="contact-section">
+  <h2 class="section-title">Contactez-moi</h2>
+
+  <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+    <div class="form-group">
+      <input type="text" name="name" ngModel placeholder="Votre nom" required />
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" ngModel placeholder="Votre email" required />
+    </div>
+    <div class="form-group">
+      <textarea name="message" ngModel placeholder="Votre message" rows="6" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn" [disabled]="!contactForm.valid">Envoyer</button>
+
+    <p class="confirmation" *ngIf="messageSent">✅ Merci pour votre message !</p>
+  </form>
 </section>
