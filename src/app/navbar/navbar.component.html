@@ -1,10 +1,17 @@
-<nav>
+<nav [class.scrolled]="isScrolled" [@fadeIn]>
   <div class="logo">Mohamed Amiri</div>
-  <ul>
-    <li><a routerLink="/home">Home</a></li>
-    <li><a routerLink="/about">About</a></li>
-    <li><a routerLink="/portfolio">Portfolio</a></li>
-    <li><a routerLink="/resume">Resume</a></li>
-    <li><a routerLink="/contact">Contact</a></li>
+  <ul class="nav-links" [class.active]="isMenuOpen">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact" class="contact-button">Contact</a></li>
   </ul>
+  <button class="theme-toggle" (click)="toggleTheme()">
+    <i [class]="isDarkTheme ? 'fas fa-sun' : 'fas fa-moon'"></i>
+  </button>
+  <button class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </button>
 </nav>

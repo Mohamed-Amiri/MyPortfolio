@@ -18,6 +18,7 @@ export class ContactComponent {
   name : string ="";
   email : string ="";
   messageSent: boolean = false;
+  userEmail: any;
 
 
   onSubmit() {

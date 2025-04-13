@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class ProjectComponent {
 
+  filterProjects(all: string) {
+    
+  }
 }

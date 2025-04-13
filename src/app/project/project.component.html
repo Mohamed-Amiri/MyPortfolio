@@ -1,32 +1,75 @@
-<section class="projects">
-  <h2 class="section-title">Mes Projets</h2>
-  <div class="projects-wrapper">
-    <div class="project-card">
-      <div class="project-image">
-        <img src="assets/project1.jpg" alt="TalentFlow Project">
+<section id="projet" class="portfolio-section">
+  <div class="section-title-container">
+    <span class="section-number">03.</span>
+    <h2 class="section-title">Some Things I've Built</h2>
+  </div>
+
+  <div class="projects-filter">
+    <button class="filter-btn active" (click)="filterProjects('all')">All</button>
+    <button class="filter-btn" (click)="filterProjects('web')">Web Apps</button>
+    <button class="filter-btn" (click)="filterProjects('mobile')">Mobile</button>
+    <button class="filter-btn" (click)="filterProjects('design')">UI/UX</button>
+  </div>
+
+  <div class="projects-grid">
+    <!-- Project Card 1 -->
+    <div class="project-card" data-category="web">
+      <div class="project-thumb">
+        <img class="project-image" src="assets/projects/talentflow.jpg" alt="TalentFlow Project">
+        <div class="project-overlay">
+          <button class="view-project">View Project</button>
+        </div>
       </div>
       <div class="project-content">
-        <h3>TalentFlow</h3>
-        <p>Une application de recrutement intuitive faite avec Java EE et Angular, optimisée pour les RH.</p>
-        <div class="project-buttons">
-          <a href="https://github.com/username/talentflow" target="_blank">GitHub</a>
-          <a href="https://demo.talentflow.com" target="_blank">Voir le projet</a>
+        <h3 class="project-title">TalentFlow</h3>
+        <p class="project-description">
+          A modern recruitment platform designed to streamline the hiring process with intuitive interfaces and powerful analytics.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Angular</span>
+          <span class="tech-tag">Java EE</span>
+          <span class="tech-tag">PostgreSQL</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/username/talentflow" target="_blank" class="project-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://demo.talentflow.com" target="_blank" class="project-link" aria-label="External Link">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
         </div>
       </div>
     </div>
 
-    <div class="project-card">
-      <div class="project-image">
-        <img src="assets/project2.jpg" alt="SportFlow Project">
+    <!-- Project Card 2 -->
+    <div class="project-card" data-category="mobile">
+      <div class="project-thumb">
+        <img class="project-image" src="assets/projects/sportflow.jpg" alt="SportFlow Project">
+        <div class="project-overlay">
+          <button class="view-project">View Project</button>
+        </div>
       </div>
       <div class="project-content">
-        <h3>SportFlow</h3>
-        <p>Plateforme de gestion sportive pour réservations, matchs, membres – construite avec Java EE & Bootstrap.</p>
-        <div class="project-buttons">
-          <a href="https://github.com/username/sportflow" target="_blank">GitHub</a>
-          <a href="https://demo.sportflow.com" target="_blank">Voir le projet</a>
+        <h3 class="project-title">SportFlow</h3>
+        <p class="project-description">
+          Comprehensive sports management platform for scheduling, managing teams and tracking performance metrics.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Java EE</span>
+          <span class="tech-tag">Bootstrap</span>
+          <span class="tech-tag">MySQL</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/username/sportflow" target="_blank" class="project-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://demo.sportflow.com" target="_blank" class="project-link" aria-label="External Link">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
         </div>
       </div>
     </div>
+
+    <!-- Add more project cards as needed -->
   </div>
 </section>

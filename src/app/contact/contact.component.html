@@ -1,18 +1,101 @@
-<section class="contact-section">
-  <h2 class="section-title">Contactez-moi</h2>
+<section id="contact" class="contact-section">
+  <div class="contact-bg">
+    <div class="contact-bg-circle circle-1"></div>
+    <div class="contact-bg-circle circle-2"></div>
+  </div>
 
-  <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
-    <div class="form-group">
-      <input type="text" name="name" ngModel placeholder="Votre nom" required />
-    </div>
-    <div class="form-group">
-      <input type="email" name="email" ngModel placeholder="Votre email" required />
-    </div>
-    <div class="form-group">
-      <textarea name="message" ngModel placeholder="Votre message" rows="6" required></textarea>
-    </div>
-    <button type="submit" class="submit-btn" [disabled]="!contactForm.valid">Envoyer</button>
+  <div class="section-heading">
+    <span class="section-number">04.</span>
+    <h2 class="section-title">Contact</h2>
+    <p class="section-subtitle">Une question, une proposition ou simplement envie de discuter ? N'hésitez pas à me contacter.</p>
+  </div>
 
-    <p class="confirmation" *ngIf="messageSent">✅ Merci pour votre message !</p>
-  </form>
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="info-card">
+        <h3><i class="fas fa-envelope"></i> Email</h3>
+        <p>mohamed.amiri&#64;example.com</p>
+      </div>
+
+      <div class="info-card">
+        <h3><i class="fas fa-map-marker-alt"></i> Localisation</h3>
+        <p>Paris, France</p>
+      </div>
+
+      <div class="info-card">
+        <h3><i class="fas fa-share-alt"></i> Réseaux Sociaux</h3>
+        <div class="social-links">
+          <a href="https://github.com/personalInfo" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/personalInfo" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://twitter.com/personalInfo" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com/personalInfo" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-container">
+      <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="form-group">
+          <input type="text"
+                 class="form-control"
+                 name="name"
+                 id="name"
+                 ngModel
+                 #name="ngModel"
+                 required
+                 minlength="3"
+                 maxlength="20"
+                 pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-']+$"
+                 placeholder=" " />
+          <div *ngIf="name.invalid && name.touched" class="error">
+            name is required and must be a valid name .
+          </div>
+          <label for="name">Votre nom</label>
+        </div>
+
+        <form #f="ngForm">
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="userEmail"
+            #email="ngModel"
+            required
+            class="form-control"
+            placeholder="Enter your email">
+
+          <div *ngIf="email.touched && email.invalid" class="error">
+            <div *ngIf="email.errors?.['required']">Email is required.</div>
+            <div *ngIf="email.errors?.['email']">Please enter a valid email address.</div>
+          </div>
+        </form>
+
+
+        <div class="form-group">
+          <input type="text" class="form-control" name="subject" id="subject" ngModel required placeholder=" " />
+          <label for="subject">Sujet</label>
+        </div>
+
+        <div class="form-group">
+          <textarea class="form-control" name="message" id="message" ngModel rows="6" required placeholder=" "></textarea>
+          <label for="message">Votre message</label>
+        </div>
+
+        <button type="submit" class="submit-btn" [disabled]="!contactForm.valid">
+          Envoyer <i class="fas fa-paper-plane"></i>
+        </button>
+
+        <div class="confirmation" *ngIf="messageSent">
+          <i class="fas fa-check-circle"></i> Merci pour votre message ! Je vous répondrai dès que possible.
+        </div>
+      </form>
+    </div>
+  </div>
 </section>

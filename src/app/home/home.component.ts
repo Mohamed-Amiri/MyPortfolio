@@ -2,15 +2,21 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
-  imports: [],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css'],
+  standalone: true
 })
 export class HomeComponent {
-  personalInfo: string | undefined;
+  isDarkTheme = false;
 
+  constructor() {
+    // Initialize theme based on system or saved preference
+    this.isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.classList.toggle('dark-theme', this.isDarkTheme);
+  }
 
-
-
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
+    document.documentElement.classList.toggle('dark-theme', this.isDarkTheme);
+  }
 }
